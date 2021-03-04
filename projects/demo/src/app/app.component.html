@@ -4,14 +4,20 @@
   </div>
 
   <div class="botones">
-    <button fooButton>TEST</button>
-    <button fooButton [color]="color">
-      <!-- [size]="size"
-      [style]="style"
-      [shape]="shape" -->
-      Primary button
-    </button>
+    <button fooButton>Default</button>
+    <button fooButton [color]="color">Primary button</button>
+    <button fooButton [color]="color3">Tertiary button</button>
 
     <button fooButton [disabled]="disabled">Disabled button</button>
+  </div>
+
+  <div>
+    <h2>Esto será un formulario de texto con un label</h2>
+  </div>
+  <div class="form__text">
+    <!-- <input fooText id="texto" placeholder="Texto de prueba" /> -->
+    <div fooText id="DIV label"></div>
+    <span fooText id="SPAN label"></span>
+    <a fooText id="A label"></a>
   </div>
 </div>

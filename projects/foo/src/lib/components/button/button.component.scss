@@ -1,7 +1,6 @@
 @import "../_shared/scss/variables";
 @import "../_shared/scss/mixins";
 @import "./button-style-solid";
-@import "./button-style-outlined";
 @import "./button-size";
 @import "./button-shape";
 
@@ -10,7 +9,8 @@
   text-align: left;
 
   height: $buttonHeight;
-  font-weight: $font;
+  font: $fontWeightButton;
+  font-style: $fontTypeIBM;
 
   margin: 0 1rem 1rem 0;
   display: inline-block;
@@ -25,7 +25,4 @@
   @include box-shadow;
 
   @include generate-solid-buttons;
-  @include generate-outlined-buttons;
-  @include generate-sized-buttons;
-  @include generate-shaped-buttons;
 }

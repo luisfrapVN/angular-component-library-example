@@ -4,9 +4,4 @@ export enum ButtonColor {
   SECONDARY = 'button-color-secondary',
   TERTIARY = 'button-color-tertiary',
   DISABLED = 'button-color-disabled',
-
-  SUCCESS = 'button-color-success',
-  INFO = 'button-color-info',
-  WARNING = 'button-color-warning',
-  DANGER = 'button-color-danger',
 }

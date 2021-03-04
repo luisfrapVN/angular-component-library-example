@@ -1,5 +1,5 @@
 .fondo {
-  background: black;
+  background: aqua;
 }
 
 .botones {
@@ -13,4 +13,9 @@ h2 {
   color: #ff7900;
   font-family: cursive;
   text-align: center;
+}
+
+.form__text {
+  display: flex;
+  justify-content: center;
 }
