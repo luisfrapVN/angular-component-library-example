@@ -1,5 +1,5 @@
 # README
 
 ### **Una vez descargado el proyecto hacer:**
-* _pm install_
-* _pm run build_
+* _npm install_
+* _npm run build_
