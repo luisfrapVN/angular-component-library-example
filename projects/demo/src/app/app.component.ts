@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ButtonColor, ButtonShape, ButtonSize, ButtonStyle } from 'foo';
+import { ButtonColor } from 'foo'; //, ButtonShape, ButtonSize, ButtonStyle
 
 @Component({
   selector: 'app-root',
@@ -13,12 +13,13 @@ export class AppComponent {
   public style;
   public shape;
   public disabled;
-
+  public color2: ButtonColor;
   constructor() {
-    this.color = ButtonColor.PRIMARY;
-    this.size = ButtonSize.SMALL;
-    this.style = ButtonStyle.SOLID;
-    this.shape = ButtonShape.SQUARED;
+    this.color = ButtonColor.DEFAULT;
+    this.color2 = ButtonColor.DISABLED;
+    // this.size = ButtonSize.SMALL;
+    // this.style = ButtonStyle.SOLID;
+    // this.shape = ButtonShape.SQUARED;
     this.disabled = true;
   }
 }

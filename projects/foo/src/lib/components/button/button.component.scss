@@ -8,13 +8,18 @@
 :host {
   box-sizing: border-box;
   text-align: left;
-  height: 48px;
-  font-weight: bold;
+
+  height: $buttonHeight;
+  font-weight: $font;
+
   margin: 0 1rem 1rem 0;
   display: inline-block;
-  color: #fff;
+
+  color: $captionWhite;
+
   outline: 0;
   border: 0;
+
   cursor: pointer;
   transition: background 0.2s, border 0.2s;
   @include box-shadow;
