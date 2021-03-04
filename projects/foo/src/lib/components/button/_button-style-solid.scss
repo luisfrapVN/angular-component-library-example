@@ -6,31 +6,31 @@
   border: 2px solid $color;
 
   &:hover {
-    background: darken(white, 10%);
+    background: white;
     color: black;
-    border: 2px solid darken(black, 10%);
+    border: 2px solid black;
   }
 
   &:active {
     color: black;
-    background: darken(white, 12%);
+    background: white;
     // border: 2px dashed darken($color, 12%);
     border: 2px solid black;
-    outline: 2px dashed darken($color, 12%);
+    outline: 2px dashed $color, 12%;
     box-shadow: none;
   }
   &:focus {
     color: black;
-    background: darken(white, 12%);
+    background: white;
     // border: 2px dashed darken($color, 12%);
     border: 2px solid black;
-    outline: 2px dashed darken($color, 12%);
+    outline: 2px dashed $color;
     box-shadow: none;
   }
 
   &:disabled {
-    background: darken(#c6c6c6, 15%);
-    border: 2px solid lighten(black, 10%);
+    background: #c6c6c6;
+    border: 2px solid black;
     box-shadow: none;
     cursor: not-allowed;
   }
