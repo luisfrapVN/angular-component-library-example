@@ -1,23 +1,27 @@
 <div class="fondo">
-  <div>
-    <h2>BIENVENIDO A CATÁLOGO DE COMPONENTES PARA ORANGE SEGUROS</h2>
-  </div>
+  <h2>Catálogo componentes</h2>
+  <hr />
+  <h3>Botones</h3>
 
   <div class="botones">
-    <button fooButton>Default</button>
-    <button fooButton [color]="color">Primary button</button>
-    <button fooButton [color]="color3">Tertiary button</button>
-
-    <button fooButton [disabled]="disabled">Disabled button</button>
+    <fooButton fooButtonText="Botón"></fooButton>
+    <fooButton
+      fooButtonText="Botón 2"
+      [fooButtonDisabled]="disabled"
+    ></fooButton>
   </div>
 
-  <div>
-    <h2>Esto será un formulario de texto con un label</h2>
-  </div>
+  <hr />
+
+  <h3>Texto</h3>
   <div class="form__text">
-    <!-- <input fooText id="texto" placeholder="Texto de prueba" /> -->
-    <div fooText id="DIV label"></div>
-    <span fooText id="SPAN label"></span>
-    <a fooText id="A label"></a>
+    <div class="text">
+      <fooText
+        fooLabelText="Esta es mi label del HTML"
+        fooInputName="miInputFoo"
+        fooInputPlHo="Este es mi placeholder del HTML"
+        fooIdInput="miInputID"
+      ></fooText>
+    </div>
   </div>
 </div>

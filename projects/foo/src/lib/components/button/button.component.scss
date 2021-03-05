@@ -4,7 +4,7 @@
 @import "./button-size";
 @import "./button-shape";
 
-:host {
+button {
   box-sizing: border-box;
   text-align: left;
 
@@ -19,6 +19,43 @@
 
   outline: 0;
   border: 0;
+
+  // TTTTTT
+
+  background: $color;
+  outline: 2px solid $color;
+
+  &:hover {
+    background: $captionWhite;
+    color: $captionBlack;
+    outline: 2px solid $captionBlack;
+  }
+
+  &:active {
+    color: $captionBlack;
+    background: $captionWhite;
+
+    outline: 2px dashed $color;
+    outline-offset: 2px;
+
+    box-shadow: none;
+  }
+  &:focus {
+    color: $captionBlack;
+    background: $captionWhite;
+
+    outline: 2px dashed $color;
+    outline-offset: 2px;
+    box-shadow: none;
+  }
+
+  &:disabled {
+    background: $captionGrey30;
+    outline: 2px solid $captionBlack;
+    color: $captionWhite;
+    box-shadow: none;
+    cursor: not-allowed;
+  }
 
   cursor: pointer;
   transition: background 0.2s, border 0.2s;

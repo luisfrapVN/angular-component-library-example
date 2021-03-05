@@ -6,19 +6,27 @@ import { ButtonShape } from './button-shape.enum';
 import { ButtonColor } from './button-color.enum';
 
 @Component({
-  selector:
-    'div[fooButton],span[fooButton],a[fooButton],input[fooButton],button[fooButton]',
-  template: '<ng-content></ng-content>',
+  selector: 'fooButton',
+
+  // 'div[fooButton],span[fooButton],a[fooButton],input[fooButton],button[fooButton]',
+  template:
+    '<button [disabled]=fooButtonDisabled id={{fooButtonId}} name={{fooButtonName}} type={{fooButtonType}} >{{fooButtonText}} {{fooButtonDisabled}}</button>',
+
   styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent {
-  @Input()
+  @Input() public fooButtonId: string;
+  @Input() public fooButtonName: string;
+  @Input() public fooButtonType: string;
+  @Input() public fooButtonText: string;
+  @Input() public fooButtonDisabled: boolean;
+  // @Input()
   public style: ButtonStyle;
 
-  @Input()
+  // @Input()
   public size: ButtonSize;
 
-  @Input()
+  // @Input()
   public shape: ButtonShape;
 
   @Input()
@@ -29,6 +37,7 @@ export class ButtonComponent {
     this.size = ButtonSize.SMALL;
     this.style = ButtonStyle.SOLID;
     this.shape = ButtonShape.SQUARED;
+    this.fooButtonDisabled = false;
   }
 
   @HostBinding('class')
