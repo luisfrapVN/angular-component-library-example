@@ -1,0 +1,75 @@
+@import "../_shared/scss/variables";
+@import "../_shared/scss/mixins";
+
+@mixin generate-button-solid($color) {
+  button {
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: $color;
+    color: $captionWhite;
+    font-weight: $fontWeightButton;
+    font-family: $fontTypeIBM;
+
+    outline: 2px solid $color;
+
+    &:hover {
+      background: $captionWhite;
+      color: $captionBlack;
+      outline: 2px solid $captionBlack;
+    }
+
+    &:active {
+      color: $captionBlack;
+      background: $captionWhite;
+
+      outline: 2px dashed $color;
+      outline-offset: 2px;
+
+      box-shadow: none;
+    }
+    &:focus {
+      color: $captionBlack;
+      background: $captionWhite;
+
+      outline: 2px dashed $color;
+      outline-offset: 2px;
+      box-shadow: none;
+    }
+
+    &:disabled {
+      background: $captionGrey30;
+      outline: 2px solid $captionBlack;
+      color: $captionWhite;
+      box-shadow: none;
+      cursor: not-allowed;
+    }
+  }
+}
+
+@mixin generate-solid-buttons {
+  &.button-style-solid {
+    &.button-color-default {
+      @include generate-button-solid($default);
+    }
+
+    &.button-color-primary {
+      @include generate-button-solid($primary);
+    }
+    &.button-color-secondary {
+      @include generate-button-solid($secondary);
+    }
+    &.button-color-tertiary {
+      @include generate-button-solid($tertiary);
+    }
+
+    &.button-color-disabled {
+      @include generate-button-solid($disabled);
+    }
+  }
+}

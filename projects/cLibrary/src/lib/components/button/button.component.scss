@@ -1,0 +1,24 @@
+@import "../_shared/scss/variables";
+@import "../_shared/scss/mixins";
+@import "./button-style-solid";
+@import "./button-size";
+@import "./button-shape";
+
+:host {
+  box-sizing: border-box;
+  text-align: left;
+
+  margin: 0 1rem 1rem 0;
+  display: inline-block;
+
+  color: $captionWhite;
+
+  outline: 0;
+  border: 0;
+
+  cursor: pointer;
+  @include box-shadow;
+  transition: background 0.2s, border 0.2s;
+  @include generate-solid-buttons;
+  @include generate-sized-buttons;
+}

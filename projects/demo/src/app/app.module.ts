@@ -3,11 +3,17 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ButtonModule, TextModule } from 'foo';
+import { ButtonModule, TextModule, ImageModule } from 'cLibrary';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, ButtonModule, TextModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ButtonModule,
+    TextModule,
+    ImageModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

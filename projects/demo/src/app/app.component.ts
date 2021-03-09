@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ButtonColor } from 'foo';
 
 @Component({
   selector: 'app-root',
@@ -8,14 +7,13 @@ import { ButtonColor } from 'foo';
 })
 export class AppComponent {
   title = 'demo';
-  public color: ButtonColor;
-  public color2: ButtonColor;
-  public color3: ButtonColor;
+
+  public imagen: string =
+    'https://www.tekcrispy.com/wp-content/uploads/2010/10/orange.jpg';
+
   public disabled: boolean;
+  public icon: boolean;
   constructor() {
-    this.color = ButtonColor.PRIMARY;
-    this.color2 = ButtonColor.DISABLED;
-    this.color3 = ButtonColor.TERTIARY;
     this.disabled = true;
   }
 }

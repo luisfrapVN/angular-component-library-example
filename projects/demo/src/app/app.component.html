@@ -4,24 +4,44 @@
   <h3>Botones</h3>
 
   <div class="botones">
-    <fooButton fooButtonText="Botón"></fooButton>
-    <fooButton
-      fooButtonText="Botón 2"
-      [fooButtonDisabled]="disabled"
-    ></fooButton>
+    <cLibraryButton cLibraryButtonText="Botón Def"></cLibraryButton>
+    <cLibraryButton
+      tipo="tertiary"
+      cLibraryButtonText="Botón Ter"
+    ></cLibraryButton>
+    <cLibraryButton icon="icon"></cLibraryButton>
+    <cLibraryButton
+      icon="compound"
+      cLibraryButtonText="Botón compuesto"
+    ></cLibraryButton>
+    <cLibraryButton
+      cLibraryButtonText="Botón Dis"
+      [cLibraryButtonDisabled]="disabled"
+    ></cLibraryButton>
   </div>
 
   <hr />
 
   <h3>Texto</h3>
-  <div class="form__text">
+  <div class="form-text">
     <div class="text">
-      <fooText
-        fooLabelText="Esta es mi label del HTML"
-        fooInputName="miInputFoo"
-        fooInputPlHo="Este es mi placeholder del HTML"
-        fooIdInput="miInputID"
-      ></fooText>
+      <cLibraryText
+        cLibraryLabelText="Esta es mi label del HTML"
+        cLibraryInputName="miInputcLibrary"
+        cLibraryInputPlHo="Este es mi placeholder del HTML"
+        cLibraryIdInput="miInputID"
+      ></cLibraryText>
     </div>
   </div>
+  <hr />
+
+  <h3>Imágenes</h3>
+  <div class="form-imagenes">
+    <cLibraryImage
+      cLibraryImageSource="{{ imagen }}"
+      cLibraryImageID="OrangeIMG"
+      cLibraryImageAlt="Logotipo Orange"
+    ></cLibraryImage>
+  </div>
 </div>
+<hr />
